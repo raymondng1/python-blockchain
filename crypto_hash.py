@@ -1,13 +1,17 @@
 import hashlib 
 import json
 
-def crypto_hash(data):
+def crypto_hash(*args):
     """
-    Return a sha-256 hash of the given data. 
+    Return a sha-256 hash of the given data/arguements. 
     """
-    stringified_data = json.dumps(data)
+    # stringified_data = json.dumps(args)
+    print(f'args: {args}')
+    joined_data = ''.join(args)
 
-    return hashlib.sha256(stringified_data.encode('utf-8')).hexdigest()
+    print(f'joined_data: {joined_data}')
+
+    return hashlib.sha256(joined_data.encode('utf-8')).hexdigest()
 
 
 def main():
