@@ -3,7 +3,7 @@
 **Activate the virtual environment**
 
 ```
-source blockahin-env/bin/activate
+source blockchain-env/bin/activate
 ```
 
 **Install all packages**
