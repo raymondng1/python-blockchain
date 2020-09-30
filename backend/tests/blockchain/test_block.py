@@ -1,4 +1,6 @@
+import time
 from backend.blockchain.block import Block, GENESIS_DATA
+from backend.config import MINE_RATE, SECONDS
 
 def test_mine_block():
     last_block = Block.genesis()
