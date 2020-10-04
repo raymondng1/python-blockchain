@@ -35,10 +35,17 @@ class Blockchain:
 
     def to_json(self):
         """
-        Serialize the blockchain into a list of blocks
+        Serialize the blockchain into a list of blocks.
+        can use the map function 
         """
-        return self.chain  
 
+        serialize_chain = []
+
+        for block in self.chain:
+            serialize_chain.append(block.to_json())
+        
+        return serialize_chain
+    
 
     @staticmethod
     def is_valid_chain(chain):

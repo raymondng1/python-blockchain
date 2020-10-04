@@ -43,14 +43,8 @@ class Block:
         """
         Serialize the block into a dictionary of its attributes
         """
-        serialize_chain = []
+        return self.__dict__
 
-        for block in self.chain:
-            serialize_chain.append(block.to_json())
-        
-
-        return serialize_chain
-    
     @staticmethod
     def mine_block(last_block, data):
         """
