@@ -6,8 +6,7 @@ from pubnub.callbacks import SubscribeCallback
 
 from backend.blockchain.block import Block
 
-pnconfig = PNConfiguration()
-pubnub = PubNub(pnconfig)
+pnconfig = PNConfiguration()pubnub = PubNub(pnconfig)
 
 CHANNELS = {
     'TEST': 'TEST',
